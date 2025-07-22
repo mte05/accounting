@@ -7,6 +7,7 @@ body {
     background-image: linear-gradient(to bottom right, red, white); 
     background-repeat: no-repeat;
     background-size: contain;
+    overflow: hidden;
 }
 
 #logo {
