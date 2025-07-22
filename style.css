@@ -1,0 +1,269 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, red, white); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#logo {
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: -50px;
+    top: -15px;
+    width: 100px;
+    height: 100px;
+    border: 2px red solid;
+    z-index: 2;
+    transition: transform 1s ease;
+}
+
+#logo:hover{
+    transform: rotate(360deg);
+}
+
+#logo_img {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#titel {
+    height: 75px;
+    background-color: white;
+    border: 2px red solid;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 1;
+    min-width: 300px;
+    width: 50vw;
+    max-width: 500px;
+    position: absolute;
+    left: 55%;
+    top: 25px;
+    transform: translate(-50%);
+}
+
+#titel_text {
+    position: relative;
+    top: 50%;
+    left: 60px;
+    transform: translate(0, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(219, 0, 0);
+}
+
+#add_content {
+    min-width: 325px;
+    width: 55vw;
+    max-width: 540px;
+    height: 30px;
+    position: absolute;
+    top: 125px;
+    left: 55%;
+    transform: translate(-55%);
+    font-size: 16px;
+}
+
+#data_container {
+    min-width: 325px;
+    width: 55vw;
+    max-width: 540px;
+    background-color: white;
+    position: absolute;
+    top: 165px;
+    left: 55%;
+    border-radius: 15px;
+    transform: translate(-55%);
+    height: 70%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#data_table {
+    padding: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:first-child {
+    height: 40px;
+}
+
+th {
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+th:first-child {
+    width: 30%;
+    border-top-left-radius: 15px;
+}
+
+th:last-child {
+    width: 17.5%;
+    border-top-right-radius: 15px;
+}
+
+th:nth-child(2), th:nth-child(3) {
+    width: 17.5%;
+}
+
+th:nth-child(4) {
+    width: 17.5%;
+}
+
+td {
+    border-right: 1px solid rgb(248, 100, 100);
+    border-bottom: 1px solid rgb(248, 100, 100);
+    height: 15px;
+    font-size: 9px;
+    text-align: center;
+    word-break: break-word;    
+    overflow-wrap: break-word;
+    z-index: 1;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-55%, -50%);
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    z-index: 10;
+}
+
+#blur {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    background-color: black;
+    z-index: 5;
+}
+
+#save {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+
+button {
+    border: 2px solid white;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button:hover {
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+}
+
+#popup label {
+    position: absolute;
+    left: 25px;
+}
+
+#popup input {
+    background-color: rgb(229, 229, 229);
+    border: 0px;
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 10px;
+}
+
+#reasons {
+    top: 75px;
+}
+
+#additional_amount {
+    top: 150px;
+}
+
+#name {
+    top: 225px;
+}
+
+#label1 {
+    top: 50px;
+}
+
+#label2 {
+    top: 125px;
+}
+
+#label3 {
+   top: 200px;
+}
+
+#label4 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    color: red;
+    top: 25px;
+}
+
+#close_button {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: red;
+    font-size: 24px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+    top: 2.5px;
+    right: 2.5px;
+}
+
+#close_button:hover {
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
