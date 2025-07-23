@@ -2,7 +2,6 @@ import { db } from "./firebase.js";
 import { collection, addDoc, Timestamp, query, orderBy, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // Token: 9bR7xP2qF43Kz9uMvyA1cL6TfYwX8dH0e
     const q = query(collection(db, "token"));
     const querySnapshot = await getDocs(q);
 

@@ -6,7 +6,6 @@
     <title>MTE Csapatpénz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="script.js"></script>
     <script type="module" src="db.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="Images/logo.png">
@@ -49,6 +48,11 @@
         <button id="save" onclick="save()">Mentés</button>
     </div>
     <script type="module" src="main.js"></script>
+    <script>
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
 </body>
 
 </html>
