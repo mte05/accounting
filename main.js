@@ -1,7 +1,24 @@
 import { db } from "./firebase.js";
 import { collection, addDoc, Timestamp, query, orderBy, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    // Token: 9bR7xP2qF43Kz9uMvyA1cL6TfYwX8dH0e
+    const q = query(collection(db, "token"));
+    const querySnapshot = await getDocs(q);
+
+    const params = new URLSearchParams(window.location.search);
+    let gToken = params.get("token");
+    let valid;
+    querySnapshot.forEach((doc) => {
+        valid = doc.data().token == gToken;
+        if (valid) return;
+    });
+    if (!valid) {
+        document.body.innerHTML = "<h1 style='color: black; text-align: center; margin-top: 50px;'>Nincs jogosultság a hozzáféréshez!</h1>";
+        document.body.style.backgroundImage = "none";
+        document.body.style.backgroundColor = "white";
+    }
+
     const popup = document.getElementById("popup");
     const blur = document.getElementById("blur");
     const table = document.getElementById("data_table");
